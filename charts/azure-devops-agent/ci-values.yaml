@@ -1,0 +1,18 @@
+replicas: 1
+
+image:
+  repository: hmctspublic.azurecr.io/hmcts/vsts-agent
+  tag: v0.1
+  pullPolicy: Always
+
+cleanRun: false
+
+aadIdentityName: azure-devops-agent
+
+secrets:
+  # Specifies whether secrets resources should be created
+  create: false
+
+env: {}
+
+extraEnv: {}
