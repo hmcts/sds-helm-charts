@@ -34,7 +34,7 @@ spec:
     spec:
       {{- $aadIdentityName := .Values.aadIdentityName }}
       volumes:
-      {{- range $.Values.keyvault}}
+      {{- range $.Values.keyVaults }}
       - name: {{ .name }}
         csi:
           driver: secrets-store.csi.k8s.io
@@ -49,9 +49,19 @@ spec:
       - name: {{ .Chart.Name }}
         image: "{{ .Values.image.repository }}:{{ .Values.image.tag }}"
         imagePullPolicy: {{ .Values.image.pullPolicy }}
+        volumeMounts:
+        {{- range $.Values.keyVaults }}
+        - name: {{ .name }}
+          mountPath: "/kvmnt"
+          readOnly: true
+        {{- end }}
         env:
+          {{- range $key, $value := .Values.extraEnv }}
+          - name: {{ $key }}
+            value: {{ $value | quote }}
+          {{- end }}
           - name: AZP_URL
-            value: {{ .Values.azureDevOpsUrl}}
+            value: {{ .Values.azureDevOpsUrl }}
           - name: AZP_POOL
             value: {{ .Values.azureDevOpsPool }}
           - name: AZP_AGENT_NAME
@@ -60,15 +70,5 @@ spec:
           - name: {{ $key }}
             value: {{ $value | quote }}
           {{- end }}
-         {{- range $key, $value := .Values.extraEnv }}
-          - name: {{ $key }}
-            value: {{ $value | quote }}
-         {{- end }}
-        volumeMounts:
-{{- if .Values.volumeMounts }}
-{{ toYaml .Values.volumeMounts | indent 10 }}
-{{ end }}
         resources:
             {{- toYaml .Values.resources | nindent 12 }}
-      volumes:
-{{ toYaml .Values.volumes | indent 8 }}
