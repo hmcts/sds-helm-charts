@@ -21,7 +21,7 @@ azureDevOpsUrl: https://dev.azure.com/hmcts
 
 azureDevOpsPool: hmcts-ss-sandbox
 
-azureDevOpsAgentName: azure-devops-aks-agent
+azureDevOpsAgentName: shared-services-aks-agent
 
 env: {}
 
