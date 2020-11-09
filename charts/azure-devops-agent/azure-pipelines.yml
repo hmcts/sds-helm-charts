@@ -27,7 +27,7 @@ jobs:
   steps:
   - template: steps/charts/validate.yaml@cnp-library
     parameters:
-      chartName: chart/azure-devops-agent/azure-devops-agent
+      chartName: charts/azure-devops-agent/azure-devops-agent
       chartReleaseName: chart-azure-devops-agent-ci-test
       chartNamespace: chart-tests
       helmInstallTimeout: "500"
@@ -45,6 +45,6 @@ jobs:
   steps:
   - template: steps/charts/release.yaml@cnp-library
     parameters:
-      chartName: chart/azure-devops-agent/azure-devops-agent
+      chartName: charts/azure-devops-agent/azure-devops-agent
       chartReleaseName: chart-azure-devops-agent
       chartNamespace: chart-tests
