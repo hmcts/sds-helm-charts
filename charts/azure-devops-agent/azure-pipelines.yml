@@ -31,6 +31,7 @@ jobs:
       chartReleaseName: chart-azure-devops-agent-ci-test
       chartNamespace: chart-tests
       helmInstallTimeout: "500"
+      valuesFile: "charts/azure-devops-agent/ci-values.yaml"
 
 - job: Release
   # Make sure we have a tag to run this job
