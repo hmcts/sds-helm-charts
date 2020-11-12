@@ -10,9 +10,9 @@ cleanRun: false
 aadIdentityName: aks-pod-identity-mi
 
 keyVaults:
-- name: ss-vault-sbox
-  resourceGroup: "infra-resource-group"
-  subscriptionId:  "a8140a9e-f1b0-481f-a4de-09e2ee23f7ab"
+- name: cftapps-dev
+  resourceGroup: "core-infra-dev-rg"
+  subscriptionId:  "8b6ea922-0862-443e-af15-6056e1c9b9a4"
   tenantId: "531ff96d-0ae9-462a-8d2d-bec7c0b42082"
   secrets:
   - azpToken
@@ -21,7 +21,7 @@ azureDevOpsUrl: https://dev.azure.com/hmcts
 
 azureDevOpsPool: hmcts-ss-sandbox
 
-azureDevOpsAgentName: shared-services-aks-agent
+azureDevOpsAgentName: shared-services-aks-agent-citest
 
 env: {}
 
