@@ -9,7 +9,7 @@ metadata:
     app: {{ include "azure-devops-agent.name" . }}
     helm.sh/chart: {{ include "azure-devops-agent.chart" . }}
     app.kubernetes.io/instance: {{ .Release.Name }}
-    {{- if .Values.aadIdentityName }}
+    {{- if .Values.aadIdentity.name }}
     aadpodidbinding: {{ .Values.aadIdentity.name }}
     {{- end }}
 spec:
@@ -18,7 +18,7 @@ spec:
     matchLabels:
       app: {{ include "azure-devops-agent.name" . }}
       app.kubernetes.io/name: {{ include "azure-devops-agent.name" . }}
-      {{- if .Values.aadIdentityName }}
+      {{- if .Values.aadIdentity.name }}
       aadpodidbinding: {{ .Values.aadIdentity.name }}
       {{- end }}
       app.kubernetes.io/instance: {{ .Release.Name }}
@@ -28,7 +28,7 @@ spec:
         app: {{ include "azure-devops-agent.name" . }}
         app.kubernetes.io/name: {{ include "azure-devops-agent.name" . }}
         app.kubernetes.io/instance: {{ .Release.Name }}
-        {{- if .Values.aadIdentityName }}
+        {{- if .Values.aadIdentity.name }}
         aadpodidbinding: {{ .Values.aadIdentity.name }}
         {{- end }}
     spec:
