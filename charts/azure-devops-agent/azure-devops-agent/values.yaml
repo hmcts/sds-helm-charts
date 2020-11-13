@@ -20,7 +20,7 @@ resources: {}
 cleanRun: false
 
 aadIdentity:
-  name: ""
+  name: azure-devops-agent
   type: ""
   resourceId: ""
   clientId: ""
@@ -30,7 +30,7 @@ keyVaults:
   resourceGroup: ""
   subscriptionId:  ""
   tenantId: ""
-  secrets: ""
+  secrets: {}
 
 azureDevOps:
   url: ""
