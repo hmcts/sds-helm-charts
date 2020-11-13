@@ -10,7 +10,7 @@ metadata:
     helm.sh/chart: {{ include "azure-devops-agent.chart" . }}
     app.kubernetes.io/instance: {{ .Release.Name }}
     {{- if .Values.aadIdentityName }}
-    aadpodidbinding: {{ .Values.aadIdentityName }}
+    aadpodidbinding: {{ .Values.aadIdentity.name }}
     {{- end }}
 spec:
   replicas: {{ .Values.replicas }}
@@ -19,7 +19,7 @@ spec:
       app: {{ include "azure-devops-agent.name" . }}
       app.kubernetes.io/name: {{ include "azure-devops-agent.name" . }}
       {{- if .Values.aadIdentityName }}
-      aadpodidbinding: {{ .Values.aadIdentityName }}
+      aadpodidbinding: {{ .Values.aadIdentity.name }}
       {{- end }}
       app.kubernetes.io/instance: {{ .Release.Name }}
   template:
@@ -29,10 +29,10 @@ spec:
         app.kubernetes.io/name: {{ include "azure-devops-agent.name" . }}
         app.kubernetes.io/instance: {{ .Release.Name }}
         {{- if .Values.aadIdentityName }}
-        aadpodidbinding: {{ .Values.aadIdentityName }}
+        aadpodidbinding: {{ .Values.aadIdentity.name }}
         {{- end }}
     spec:
-      {{- $aadIdentityName := .Values.aadIdentityName }}
+      {{- $aadIdentityName := .Values.aadIdentity.name }}
       volumes:
       {{- range $.Values.keyVaults }}
       - name: {{ .name }}
@@ -40,7 +40,7 @@ spec:
           driver: secrets-store.csi.k8s.io
           readOnly: true
           volumeAttributes:
-            secretProviderClass: {{ $aadIdentityName }}-podid
+            secretProviderClass: {{ $aadIdentityName }}
       {{- end }}
       {{- with .Values.volumes }}
         {{- toYaml . | nindent 8 }}
@@ -61,11 +61,11 @@ spec:
             value: {{ $value | quote }}
           {{- end }}
           - name: AZP_URL
-            value: {{ .Values.azureDevOpsUrl }}
+            value: {{ .Values.azureDevOps.url }}
           - name: AZP_POOL
-            value: {{ .Values.azureDevOpsPool }}
+            value: {{ .Values.azureDevOps.pool }}
           - name: AZP_AGENT_NAME
-            value: {{ .Values.azureDevOpsAgentName }}
+            value: {{ .Values.azureDevOps.agentName }}
           {{- range $key, $value := $.Values.env }}
           - name: {{ $key }}
             value: {{ $value | quote }}
