@@ -1,8 +1,8 @@
 replicas: 1
 
 image:
-repository: {}
-  tag: {}
+  repository: hmctspublic.azurecr.io/hmcts/vsts-agent
+  tag: db7stq
   pullPolicy: Always
 
 resources: {}
