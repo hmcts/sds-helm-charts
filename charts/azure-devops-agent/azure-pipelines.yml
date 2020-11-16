@@ -30,7 +30,9 @@ jobs:
       chartName: azure-devops-agent
       chartReleaseName: chart-azure-devops-agent-ci-test
       chartNamespace: chart-tests
+      chartPath: charts/azure-devops-agent/
       helmInstallTimeout: "500"
+      valuesFile: "charts/azure-devops-agent/ci-values.yaml"
 
 - job: Release
   # Make sure we have a tag to run this job
@@ -48,3 +50,4 @@ jobs:
       chartName: azure-devops-agent
       chartReleaseName: chart-azure-devops-agent
       chartNamespace: chart-tests
+      chartPath: charts/azure-devops-agent/
