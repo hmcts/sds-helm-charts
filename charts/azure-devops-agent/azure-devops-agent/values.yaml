@@ -2,7 +2,7 @@ replicas: 1
 
 image:
   repository: hmctspublic.azurecr.io/hmcts/vsts-agent
-  tag: db7stq
+  tag: db87ga
   pullPolicy: Always
 
 resources: {}
@@ -27,8 +27,6 @@ aadIdentity:
 
 keyVaults:
 - name: {}
-  resourceGroup: ""
-  subscriptionId:  ""
   tenantId: ""
   secrets: {}
 
