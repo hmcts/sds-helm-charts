@@ -65,7 +65,7 @@ spec:
           - name: AZP_POOL
             value: {{ .Values.azureDevOps.pool }}
           - name: AZP_AGENT_NAME
-            value: {{ .Values.azureDevOps.agentName }}
+            value: {{ .Values.azureDevOps.agentName | default "$HOSTNAME" }}
           {{- range $key, $value := $.Values.env }}
           - name: {{ $key }}
             value: {{ $value | quote }}
