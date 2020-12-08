@@ -21,7 +21,7 @@ keyVaults:
 
 azureDevOps:
   url: https://dev.azure.com/hmcts
-  pool: hmcts-ss-sandbox
+  pool: hmcts-ss-sbox
   agentName: shared-services-aks-agent-citest
 
 env: {}
