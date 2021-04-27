@@ -4,3 +4,6 @@ nodejs:
     PORT: 3000
     USE_AUTH: false
     NODE_ENV: development
+  ingressSessionAffinity:
+    enabled: true
+    sessionCookieName: jd-public
