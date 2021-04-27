@@ -1,0 +1,11 @@
+name: jd-public
+apiVersion: v2
+version: 0.1.0
+appVersion: "2.15.129"
+description: Juror Digital - Public
+maintainers:
+  - name: HMCTS Platform Operations
+dependencies:
+  - name: nodejs
+    version: 2.3.5
+    repository: "https://hmctspublic.azurecr.io/helm/v1/repo/"
