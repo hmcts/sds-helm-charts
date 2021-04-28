@@ -6,4 +6,4 @@ nodejs:
     NODE_ENV: development
   ingressSessionAffinity:
     enabled: true
-    sessionCookieName: jd-public
+    sessionCookieName: affinity
