@@ -1,0 +1,7 @@
+.terraform
+*.secrets
+.DS_Store
+*tfstate*
+*.swp
+.idea/*
+*/Chart.lock
