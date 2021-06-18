@@ -13,7 +13,7 @@ nodejs:
     enabled: true
     sessionCookieName: affinity
   keyVaults:
-    juror-digital-vault
+    juror-digital-vault:
       secrets:
         - bureau-sessionSecret
         - bureau-jwtKey
