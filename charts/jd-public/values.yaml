@@ -8,7 +8,7 @@ nodejs:
     enabled: true
     sessionCookieName: affinity
   keyVaults:
-    juror-digital-vault-{{ .Values.global.environment }}
+    juror-digital-vault
     secrets:
       - public-sessionSecret
       - public-jwtKey
