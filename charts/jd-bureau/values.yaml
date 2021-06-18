@@ -12,3 +12,12 @@ nodejs:
   ingressSessionAffinity:
     enabled: true
     sessionCookieName: affinity
+  keyVaults:
+    juror-digital-vault:
+      secrets:
+        - bureau-sessionSecret
+        - bureau-jwtKey
+        - bureau-smartSurveyToken
+        - bureau-smartSurveyTokenSecret
+        - bureau-jwtNoAuthKey
+        - bureau-jwtTTL
