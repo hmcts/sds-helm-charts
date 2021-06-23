@@ -10,9 +10,9 @@ nodejs:
     sessionCookieName: affinity
   keyVaults:
     juror-digital-vault:
-    secrets:
-      - public-sessionSecret
-      - public-jwtKey
-      - public-jwtNoAuthKey
-      - public-jwtKeyBureau
-      - public-jwtTTL
+      secrets:
+        - public-sessionSecret
+        - public-jwtKey
+        - public-jwtNoAuthKey
+        - public-jwtKeyBureau
+        - public-jwtTTL
