@@ -1,0 +1,20 @@
+nodejs:
+  aadIdentityName: juror-digital
+  readinessPath: '/'
+  livenessPath: '/'
+  environment:
+    API_ENDPOINT: http://moj-nle-reverse-proxy/api/v1/
+    PORT: 3000
+    USE_AUTH: false
+    NODE_ENV: development
+  ingressSessionAffinity:
+    enabled: true
+    sessionCookieName: affinity
+  keyVaults:
+    juror-digital-vault:
+      secrets:
+        - public-sessionSecret
+        - public-jwtKey
+        - public-jwtNoAuthKey
+        - public-jwtKeyBureau
+        - public-jwtTTL
