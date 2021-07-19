@@ -1,5 +1,4 @@
 nodejs:
-  aadIdentityName: juror-digital
   readinessPath: '/'
   livenessPath: '/'
   environment:
