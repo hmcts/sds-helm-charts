@@ -3,7 +3,7 @@ nodejs:
   livenessPath: '/'
   environment:
     API_ENDPOINT: http://moj-nle-reverse-proxy/api/v1/
-    PORT: 3000
+    PORT: 80
     USE_AUTH: false
     NODE_ENV: development
   ingressSessionAffinity:
