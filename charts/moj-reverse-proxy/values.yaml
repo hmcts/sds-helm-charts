@@ -6,6 +6,3 @@ nodejs:
     PORT: 80
     USE_AUTH: false
     NODE_ENV: development
-  ingressSessionAffinity:
-    enabled: true
-    sessionCookieName: affinity
