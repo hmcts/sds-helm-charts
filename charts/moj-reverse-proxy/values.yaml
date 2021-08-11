@@ -1,8 +1,7 @@
 nodejs:
   readinessPath: '/'
   livenessPath: '/'
-  environment:
-    API_ENDPOINT: http://moj-nle-reverse-proxy/api/v1/
+  applicationPort: 8080
   ingressSessionAffinity:
     enabled: true
     sessionCookieName: affinity
