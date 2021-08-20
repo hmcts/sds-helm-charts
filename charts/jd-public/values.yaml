@@ -10,6 +10,7 @@ nodejs:
   ingressSessionAffinity:
     enabled: true
     sessionCookieName: affinity
+  disableTraefikTls: true
   keyVaults:
     juror-digital-vault:
       secrets:
