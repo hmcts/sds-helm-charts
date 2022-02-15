@@ -3,7 +3,7 @@ nodejs:
   readinessPath: '/'
   livenessPath: '/'
   environment:
-    API_ENDPOINT: http://moj-nle-reverse-proxy/api/v1/
+    API_ENDPOINT: http://moj-reverse-proxy-nodejs/api/v1/
     PORT: 3000
     USE_AUTH: false
     NODE_ENV: development
@@ -15,6 +15,7 @@ nodejs:
   ingressSessionAffinity:
     enabled: true
     sessionCookieName: affinity
+  disableTraefikTls: true
   keyVaults:
     juror-digital-vault:
       secrets:
