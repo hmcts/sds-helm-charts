@@ -19,4 +19,3 @@ nodejs:
         - public-jwtNoAuthKey
         - public-jwtKeyBureau
         - public-jwtTTL
-    sessionCookieName: affinity
