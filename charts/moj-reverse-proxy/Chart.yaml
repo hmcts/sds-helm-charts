@@ -1,9 +1,9 @@
 name: moj-reverse-proxy
 apiVersion: v2
-version: 0.1.0
+version: 0.1.1
 appVersion: "2.15.129"
 description: Juror Digital - Public
 dependencies:
   - name: nodejs
-    version: 2.3.8
+    version: 2.4.0
     repository: "https://hmctspublic.azurecr.io/helm/v1/repo/"
