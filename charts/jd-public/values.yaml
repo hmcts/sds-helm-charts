@@ -9,4 +9,12 @@ nodejs:
     NODE_ENV: development
   ingressSessionAffinity:
     enabled: true
+  keyVaults:
+    juror-digital-vault:
+      secrets:
+        - public-sessionSecret
+        - public-jwtKey
+        - public-jwtNoAuthKey
+        - public-jwtKeyBureau
+        - public-jwtTTL
     sessionCookieName: affinity
