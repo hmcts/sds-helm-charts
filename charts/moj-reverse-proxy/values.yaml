@@ -1,6 +1,7 @@
 nodejs:
   readinessPath: '/health'
   livenessPath: '/health'
+  startupPath: '/health'
   applicationPort: 8080
   ingressSessionAffinity:
     enabled: true

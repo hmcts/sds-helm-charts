@@ -2,6 +2,7 @@ nodejs:
   aadIdentityName: juror-digital
   readinessPath: '/'
   livenessPath: '/'
+  startupPath: '/'
   environment:
     API_ENDPOINT: http://moj-reverse-proxy-nodejs/api/v1/
     PORT: 3000

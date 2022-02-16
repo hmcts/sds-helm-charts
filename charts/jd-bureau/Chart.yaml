@@ -1,6 +1,6 @@
 name: jd-bureau
 apiVersion: v2
-version: 0.1.1
+version: 0.1.2
 appVersion: "2.13.6"
 description: Juror Digital - Public
 dependencies:
