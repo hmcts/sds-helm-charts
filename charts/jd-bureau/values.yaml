@@ -26,3 +26,4 @@ nodejs:
         - bureau-smartSurveyTokenSecret
         - bureau-jwtNoAuthKey
         - bureau-jwtTTL
+  cpuRequests: 150m
