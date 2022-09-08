@@ -1,0 +1,9 @@
+name: themis-fe
+apiVersion: v2
+version: 0.1.2
+appVersion: "1.0.0"
+description: Themis Front End
+dependencies:
+  - name: nodejs
+    version: 2.4.0
+    repository: "https://hmctspublic.azurecr.io/helm/v1/repo/"
