@@ -1,5 +1,5 @@
 nodejs:
-  aadIdentityName: themis-fe
+  aadIdentityName: met-schema
   readinessPath: '/'
   livenessPath: '/'
   startupPath: '/'
