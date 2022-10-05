@@ -36,10 +36,10 @@ nodejs:
   keyVaults:
     libragob-kv:
       secrets:
-        - db_connection_url_ThemisGatewayDS
-        - db_connection_url_ThemisDacDS
-        - db_connection_url_dasDS
-        - db_connection_url_confDS
-        - db_connection_url_finesDS
-        - db_connection_url_maintenanceDS
-        - db_connection_url_ThemisJmsDS
+        - db-connection-url-ThemisGatewayDS
+        - db-connection-url-ThemisDacDS
+        - db-connection-url-dasDS
+        - db-connection-url-confDS
+        - db-connection-url-finesDS
+        - db-connection-url-maintenanceDS
+        - db-connection-url-ThemisJmsDS
