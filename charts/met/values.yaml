@@ -34,8 +34,7 @@ nodejs:
     sessionCookieName: affinity
   disableTraefikTls: true
   keyVaults:
-    libragob-{{ .Values.global.environment }}-kv:
-      excludeEnvironmentSuffix: true
+    libragob-kv:
       secrets:
         - db-connection-url-ThemisGatewayDS
         - db-connection-url-ThemisDacDS
