@@ -35,6 +35,7 @@ nodejs:
   disableTraefikTls: true
   keyVaults:
     libragob-{{ .Values.global.environment }}-kv:
+      excludeEnvironmentSuffix: true
       secrets:
         - db-connection-url-ThemisGatewayDS
         - db-connection-url-ThemisDacDS
