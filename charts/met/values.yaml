@@ -33,13 +33,3 @@ nodejs:
     enabled: true
     sessionCookieName: affinity
   disableTraefikTls: true
-  keyVaults:
-    libragob-kv:
-      secrets:
-        - db-connection-url-ThemisGatewayDS
-        - db-connection-url-ThemisDacDS
-        - db-connection-url-dasDS
-        - db-connection-url-confDS
-        - db-connection-url-finesDS
-        - db-connection-url-maintenanceDS
-        - db-connection-url-ThemisJmsDS
