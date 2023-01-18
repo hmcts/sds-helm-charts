@@ -1,9 +1,9 @@
 name: jd-bureau
 apiVersion: v2
-version: 0.1.2
+version: 0.1.3
 appVersion: "2.13.6"
 description: Juror Digital - Public
 dependencies:
   - name: nodejs
-    version: 2.4.0
+    version: 2.4.11
     repository: "https://hmctspublic.azurecr.io/helm/v1/repo/"
