@@ -5,5 +5,5 @@ appVersion: "2.15.129"
 description: Juror Digital - Public
 dependencies:
   - name: nodejs
-    version: 2.4.0
+    version: 2.4.11
     repository: "https://hmctspublic.azurecr.io/helm/v1/repo/"
