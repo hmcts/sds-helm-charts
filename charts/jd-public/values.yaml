@@ -20,3 +20,4 @@ nodejs:
         - public-jwtNoAuthKey
         - public-jwtKeyBureau
         - public-jwtTTL
+        - public-pcqTokenKey
