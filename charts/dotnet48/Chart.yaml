@@ -1,8 +1,8 @@
-name: dotnet4.8
+name: dotnet48
 apiVersion: v2
 version: 0.1.3
 appVersion: "1.0.0"
-description: Dot net 4.8 App
+description: Dot net 48 App
 dependencies:
   - name: java
     version: 3.8.0
