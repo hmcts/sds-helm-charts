@@ -1,0 +1,4 @@
+java:
+  image: 'sdshmctspublicsbox.azurecr.io/aspnetapp:v1'
+  applicationPort: 8080
+  replicas: 1
